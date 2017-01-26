@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ExerciseAnimalAssociation
 {
-    class Program
+    class SupportingMember : Member
     {
-        static void Main(string[] args)
+        public SupportingMember(string name) : base(name)
         {
-
         }
     }
 }

@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ExerciseAnimalAssociation
 {
-    class Program
+    enum Reward
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Travel,
+        Television,
+        Smartphone
     }
 }

@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExerciseAnimalAssociation
 {
-    class Program
+    interface IExtra
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Reward ChooseReward(Reward reward);
+        float Donate(float donation);
     }
 }
