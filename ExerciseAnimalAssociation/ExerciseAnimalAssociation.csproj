@@ -46,6 +46,7 @@
     <Compile Include="HonoraryMember.cs" />
     <Compile Include="IExtra.cs" />
     <Compile Include="Member.cs" />
+    <Compile Include="Members.cs" />
     <Compile Include="NormalMember.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

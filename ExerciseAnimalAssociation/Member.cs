@@ -8,22 +8,22 @@ namespace ExerciseAnimalAssociation
 {
     abstract class Member : IExtra, IComparable
     {
-        public int MembershipID { get; private set; }
-        public string Name { get; private set; }
-        public Reward Reward { get; private set; }
-        public float Donation { get; private set; }
+        public int MembershipID { get; set; }
+        public string Name { get; set; }
+        public Reward Reward { get; set; }
+        public float Donation { get; set; }
         public Member(string name)
         {
             Name = name;
         }
-        public Reward ChooseReward(Reward reward)
+        public virtual Reward ChooseReward(Reward reward)
         {
-            throw new NotImplementedException();
+            return Reward.Smartphone;
         }
 
-        public float Donate(float donation)
+        public virtual float Donate(float donation)
         {
-            throw new NotImplementedException();
+            return donation;
         }
 
         public int CompareTo(object obj)
