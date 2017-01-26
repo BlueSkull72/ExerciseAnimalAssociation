@@ -10,7 +10,7 @@ namespace ExerciseAnimalAssociation
     {
         public NormalMember(string name, Reward reward, float donation) : base(name)
         {
-            Donation = donation;
+            Donation = Donate(donation);
             Reward = ChooseReward(reward);
         }
         public override Reward ChooseReward(Reward reward)
@@ -26,7 +26,7 @@ namespace ExerciseAnimalAssociation
 
         public override float Donate(float donation)
         {
-            if (donation >= 20 || donation <= 30)
+            if (donation >= 20 && donation <= 30)
             {
                 return donation;
             }

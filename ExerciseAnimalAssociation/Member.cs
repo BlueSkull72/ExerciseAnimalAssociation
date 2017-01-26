@@ -28,11 +28,18 @@ namespace ExerciseAnimalAssociation
 
         public int CompareTo(object obj)
         {
-            return Name.CompareTo(obj);
+            if (obj != null)
+            {
+                return Name.CompareTo((obj as Member).Name);
+            }
+            else
+            {
+                return 0;
+            }
         }
         public override string ToString()
         {
-            return string.Format("{0,4}Name: {1,10}Reward: {2,12},Donation: {3}", MembershipID, Name, Reward, Donation);
+            return string.Format("{0,-4}Name: {1,-10}Reward: {2,-12},Donation: {3}", MembershipID, Name, Reward, Donation);
         }
     }
 }

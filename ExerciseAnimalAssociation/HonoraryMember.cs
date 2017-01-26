@@ -15,7 +15,7 @@ namespace ExerciseAnimalAssociation
         public float Donation { get; private set; }*/
         public HonoraryMember(string name, Reward reward, float donation) : base(name)
         {
-            Donation = donation;
+            Donation = Donate(donation);
             Reward = ChooseReward(reward);
         }
         public override Reward ChooseReward(Reward reward)
@@ -35,7 +35,7 @@ namespace ExerciseAnimalAssociation
 
         public override float Donate(float donation)
         {
-            if (donation >= 70 || donation <= 80)
+            if (donation >= 70 && donation <= 80)
             {
                 return donation;
             }
