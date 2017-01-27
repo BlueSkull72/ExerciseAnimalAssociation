@@ -8,7 +8,18 @@ namespace ExerciseAnimalAssociation
 {
     abstract class Member : IExtra, IComparable
     {
-        public int MembershipID { get; set; }
+        private int membershipID = 0;
+        public int MembershipID
+        {
+            get { return membershipID; }
+            set
+            {
+                if (membershipID == 0)
+                {
+                    membershipID = value;
+                }
+            }
+        }
         public string Name { get; set; }
         public Reward Reward { get; set; }
         public float Donation { get; set; }
